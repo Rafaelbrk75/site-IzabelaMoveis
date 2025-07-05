@@ -1,303 +1,617 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Izabela Móveis</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
     <script src="./index.js" defer></script>
-</head>
+  </head>
 
-<body class="bg-neutral-950">
+  <body class="bg-neutral-950">
     <header class="flex items-center justify-between py-4 p-8 md:px-32">
-        <a href="#">
-            <img src="./assets/logo.png" alt="Logo" class="w-52 hover:scale-105 transition-all">
+      <a href="#">
+        <img
+          src="./assets/logo.png"
+          alt="Logo"
+          class="w-52 hover:scale-105 transition-all"
+        />
+      </a>
+
+      <ul class="hidden xl:flex items-center gap-12 font-semibold text-base">
+        <li>
+          <a
+            href="#home"
+            class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <div class="relative hidden md:flex items-center gap-4">
+        <a
+          href="https://www.instagram.com/izabelamoveis1/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-pink-500 transition-colors text-xl"
+        >
+          <i class="bi bi-instagram"></i>
         </a>
+        <a
+          href="https://www.facebook.com/izabela.movies"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-blue-500 transition-colors text-xl"
+        >
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a
+          href="https://wa.me/5544988239500"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-green-400 transition-colors text-xl"
+        >
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
 
-        <ul class="hidden xl:flex items-center gap-12 font-semibold text-base">
-            <li>
-                <a href="#home"
-                    class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block">Home</a>
-            </li>
-            <li>
-                <a href="#about"
-                    class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block">About</a>
-            </li>
-            <li>
-                <a href="#services"
-                    class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block">Services</a>
-            </li>
-            <li>
-                <a href="#contact"
-                    class="p-3 text-white hover:text-yellow-300 rounded-md transition-all cursor-pointer block">Contact</a>
-            </li>
-        </ul>
-
-        <div class="relative hidden md:flex items-center gap-4">
-            <a href="https://www.instagram.com/izabelamoveis1/" target="_blank" rel="noopener noreferrer"
-                class="text-white hover:text-pink-500 transition-colors text-xl">
-                <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/izabela.movies" target="_blank" rel="noopener noreferrer"
-                class="text-white hover:text-blue-500 transition-colors text-xl">
-                <i class="bi bi-facebook"></i>
-            </a>
-            <a href="https://wa.me/5544988239500" target="_blank" rel="noopener noreferrer"
-                class="text-white hover:text-green-400 transition-colors text-xl">
-                <i class="bi bi-whatsapp"></i>
-            </a>
-        </div>
-
-        <i id="menu-toggle" class="bi bi-list xl:hidden block text-5xl cursor-pointer text-white"></i>
+      <i
+        id="menu-toggle"
+        class="bi bi-list xl:hidden block text-5xl cursor-pointer text-white"
+      ></i>
     </header>
     <!-- Menu Mobile (oculto por padrão) -->
-    <nav id="mobile-menu"
-        class="xl:hidden hidden scale-y-0 transition-transform origin-top duration-300 ease-in-out flex flex-col items-center text-center px-6 py-8 gap-6 bg-neutral-900 shadow-md z-20 absolute w-full">
+    <nav
+      id="mobile-menu"
+      class="xl:hidden hidden scale-y-0 transition-transform origin-top duration-300 ease-in-out flex flex-col items-center text-center px-6 py-8 gap-6 bg-neutral-900 shadow-md z-20 absolute w-full"
+    >
+      <ul class="flex flex-col gap-4 font-semibold text-lg text-white">
+        <li>
+          <a href="#home" class="hover:text-yellow-300 transition-colors"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="hover:text-yellow-300 transition-colors"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="#services" class="hover:text-yellow-300 transition-colors"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-yellow-300 transition-colors"
+            >Contact</a
+          >
+        </li>
+      </ul>
 
-        <ul class="flex flex-col gap-4 font-semibold text-lg text-white">
-            <li><a href="#home" class="hover:text-yellow-300 transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-yellow-300 transition-colors">About</a></li>
-            <li><a href="#services" class="hover:text-yellow-300 transition-colors">Services</a></li>
-            <li><a href="#contact" class="hover:text-yellow-300 transition-colors">Contact</a></li>
-        </ul>
-
-        <div class="flex gap-4 pt-4 text-white">
-            <a href="https://www.instagram.com/izabelamoveis1/" target="_blank" class="hover:text-pink-500 text-xl"><i
-                    class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/izabela.movies" target="_blank" class="hover:text-blue-500 text-xl"><i
-                    class="bi bi-facebook"></i></a>
-            <a href="https://wa.me/5544988239500" target="_blank" class="hover:text-green-400 text-xl"><i
-                    class="bi bi-whatsapp"></i></a>
-        </div>
-
+      <div class="flex gap-4 pt-4 text-white">
+        <a
+          href="https://www.instagram.com/izabelamoveis1/"
+          target="_blank"
+          class="hover:text-pink-500 text-xl"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/izabela.movies"
+          target="_blank"
+          class="hover:text-blue-500 text-xl"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a
+          href="https://wa.me/5544988239500"
+          target="_blank"
+          class="hover:text-green-400 text-xl"
+          ><i class="bi bi-whatsapp"></i
+        ></a>
+      </div>
     </nav>
 
     <section id="home" class="relative pt-28 lg:pt-30 overflow-hidden">
+      <div
+        class="absolute left-1/2 top-40 w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full rotate-90 skew-x-12 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-9 blur-[30px] z-[1] pointer-events-none"
+      ></div>
+      <!-- Layout em colunas no desktop -->
+      <div
+        class="relative flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto px-6 lg:px-20"
+      >
+        <!-- Texto -->
         <div
-            class="absolute left-1/2 top-40 w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full rotate-90 skew-x-12 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-9 blur-[30px] z-[1] pointer-events-none">
+          class="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
+          <h1
+            class="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl leading-tight"
+          >
+            A loja perfeita
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 ml-2"
+            >
+              para você
+            </span>
+          </h1>
+
+          <p class="text-gray-300 text-base sm:text-lg mt-6">
+            Aqui, cada detalhe é pensado para criar ambientes que acolham,
+            inspirem e proporcionem mais qualidade de vida para a sua família.
+          </p>
+
+          <a
+            href="#contact"
+            class="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-full transition"
+          >
+            Fale conosco
+          </a>
         </div>
-        <!-- Layout em colunas no desktop -->
+
+        <!-- Imagem -->
         <div
-            class="relative flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto px-6 lg:px-20">
-
-            <!-- Texto -->
-            <div class="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
-                data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                <h1 class="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl leading-tight">
-                    A loja perfeita
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 ml-2">
-                        para você
-                    </span>
-                </h1>
-
-                <p class="text-gray-300 text-base sm:text-lg mt-6">
-                    Aqui, cada detalhe é pensado para criar ambientes que acolham, inspirem e proporcionem mais
-                    qualidade de vida para a sua família.
-                </p>
-
-                <a href="#contact"
-                    class="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-full transition">
-                    Fale conosco
-                </a>
-            </div>
-
-            <!-- Imagem -->
-            <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-non lg:mx-0 mx-auto max-w-3xl"
-                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-                <img src="./assets/image.jpg" alt="Imagem de móveis"
-                    class="w-full h-full lg:h-auto rounded-3xl z-10 object-cover bg-orange-500 shadow-xl shadow-orange-500/50" />
-            </div>
+          class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-non lg:mx-0 mx-auto max-w-3xl"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <img
+            src="./assets/image.jpg"
+            alt="Imagem de móveis"
+            class="w-full h-full lg:h-auto rounded-3xl z-10 object-cover bg-orange-500 shadow-xl shadow-orange-500/50"
+          />
         </div>
+      </div>
 
-        <!-- Serviços -->
-        <div class=" text-black py-20 justify-between items-center max-w-7xl mx-auto  px-6 lg:px-20 ">
-            <div class="container w-full grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-col-3 xl:grid-cols-3">
-                <!-- Card 1 -->
-                <div
-                    class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm duration-300 space-y-5"
-                    data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="flex items-start gap-5 mb-4">
-                        <i class="bi bi-truck text-4xl md:text-5xl"></i>
-                        <p class="text-lg md:text-2xl font-medium">
-                            <span class="font-bold">Entrega <br>rápida</span>
-                        </p>
-                    </div>
-                    <p class="text-base md:text-lg ">
-                        <span class="font-bold">Qualidade garantida</span> <br>Nossos móveis são feitos com materiais de
-                        alta qualidade.
-                    </p>
-                </div>
-                <!-- Card 2 -->
-                <div
-                    class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm space-y-5"
-                    data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="flex items-start gap-5 mb-4">
-                        <i class="bi bi-chat-dots text-4xl md:text-5xl"></i>
-                        <p class="text-lg md:text-2xl font-medium">
-                            <span class="font-bold">Atendimento humano</span>
-                        </p>
-                    </div>
-                    <p class="text-base md:text-lg">
-                        <span class="font-bold">Sempre por perto</span> <br>
-                        Nossa equipe está pronta para te ajudar com atenção e carinho.
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div
-                    class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm space-y-5"
-                    data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="flex items-start gap-5 mb-4">
-                        <i class="bi bi-grid-3x3-gap text-4xl md:text-5xl"></i>
-                        <p class="text-lg md:text-2xl font-medium">
-                            <span class="font-bold">Variedade para sua casa</span>
-                        </p>
-                    </div>
-                    <p class="text-base md:text-lg">
-                        <span class="font-bold">Encontre o ideal</span> <br>
-                        Diversos estilos, tamanhos e cores para todos os ambientes da sua família.
-                    </p>
-                </div>
-
+      <!-- Serviços -->
+      <div
+        class="text-black py-20 justify-between items-center max-w-7xl mx-auto px-6 lg:px-20"
+      >
+        <div
+          class="container w-full grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-col-3 xl:grid-cols-3"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm duration-300 space-y-5"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="flex items-start gap-5 mb-4">
+              <i class="bi bi-truck text-4xl md:text-5xl"></i>
+              <p class="text-lg md:text-2xl font-medium">
+                <span class="font-bold">Entrega <br />rápida</span>
+              </p>
             </div>
+            <p class="text-base md:text-lg">
+              <span class="font-bold">Qualidade garantida</span> <br />Nossos
+              móveis são feitos com materiais de alta qualidade.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm space-y-5"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="flex items-start gap-5 mb-4">
+              <i class="bi bi-chat-dots text-4xl md:text-5xl"></i>
+              <p class="text-lg md:text-2xl font-medium">
+                <span class="font-bold">Atendimento humano</span>
+              </p>
+            </div>
+            <p class="text-base md:text-lg">
+              <span class="font-bold">Sempre por perto</span> <br />
+              Nossa equipe está pronta para te ajudar com atenção e carinho.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-yellow-500 border border-black p-6 rounded-lg cursor-pointer transition-transform duration-300 hover:shadow-2xl hover:shadow-yellow-500/50 hover:-translate-y-1 backdrop-blur-sm space-y-5"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="flex items-start gap-5 mb-4">
+              <i class="bi bi-grid-3x3-gap text-4xl md:text-5xl"></i>
+              <p class="text-lg md:text-2xl font-medium">
+                <span class="font-bold">Variedade para sua casa</span>
+              </p>
+            </div>
+            <p class="text-base md:text-lg">
+              <span class="font-bold">Encontre o ideal</span> <br />
+              Diversos estilos, tamanhos e cores para todos os ambientes da sua
+              família.
+            </p>
+          </div>
         </div>
-
+      </div>
     </section>
 
-    <section id="about" class="relative overflow-hidden py-24">
-        <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20" data-aos="fade-up">
-            <h2 class="text-yellow-500 text-3xl font-semibold mb-6">Sobre Nós</h2>
-        </div>
+    <section id="about" class="relative py-28 text-white">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-semibold text-yellow-400 tracking-tight">
+          Sobre Nós
+        </h2>
+        <p class="text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
+          Mais do que móveis — criamos ambientes com propósito, estética e
+          conforto para você e sua família.
+        </p>
+      </div>
 
-        <!-- Carrossel -->
-        <div class="relative w-full max-w-4xl mx-auto overflow-hidden border border-white/10 rounded-2xl shadow-lg bg-white/20 backdrop-blur-sm drop-shadow"
-            id="carousel" data-aos="zoom-in-up" data-aos-delay="100">
-            <div class="flex transition-transform duration-700 ease-in-out" id="carousel-track">
-
-                <!-- Slide 1 -->
-                <div
-                    class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800 rounded-2xl overflow-hidden shadow-md">
-
-                    <div class="w-full aspect-[4/3] overflow-hidden">
-                        <img src="./assets/IMG_6055.jpg"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    </div>
-
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-2xl font-bold text-white">Conforto para sua casa</h3>
-                        <p class="text-gray-300 text-base">
-                            Nossos móveis são feitos para garantir conforto, qualidade e beleza em cada ambiente.
-                        </p>
-                        <a href="#contact"
-                            class="inline-block mt-2 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-md">
-                            Saiba mais
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- Slide 2 -->
-                <div
-                    class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800 rounded-2xl overflow-hidden shadow-md">
-
-                    <div class="w-full aspect-[4/3] overflow-hidden">
-                        <img src="./assets/mesa.jpg"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    </div>
-
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-2xl font-bold text-white">Feito para famílias</h3>
-                        <p class="text-gray-300 text-base">Móveis pensados para trazer aconchego e praticidade para toda
-                            a sua família.</p>
-                        <a href="#about"
-                            class="inline-block mt-2 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-md">Conheça
-                            mais</a>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div
-                    class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800 rounded-2xl overflow-hidden shadow-md">
-
-                    <div class="w-full aspect-[4/3] overflow-hidden">
-                        <img src="./assets/IMG_6061.jpg"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    </div>
-
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-2xl font-bold text-white">Estilo e sofisticação</h3>
-                        <p class="text-gray-300 text-base">Transforme sua casa com peças modernas e elegantes que
-                            refletem sua personalidade.</p>
-                        <a href="#services"
-                            class="inline-block mt-2 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-md">Ver
-                            serviços</a>
-                    </div>
-                </div>
+      <!-- Carrossel -->
+      <div
+        class="relative max-w-5xl mx-auto overflow-hidden rounded-3xl shadow-xl bg-white/10 backdrop-blur-sm border border-white/10"
+        data-aos="zoom-in-up"
+      >
+        <div
+          class="flex transition-transform duration-700 ease-in-out"
+          id="carousel-track"
+        >
+          <!-- Slide -->
+          <div
+            class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800"
+          >
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src="./assets/IMG_6055.jpg"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
             </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-2xl font-semibold text-white">
+                Conforto para sua casa
+              </h3>
+              <p class="text-gray-300">
+                Móveis que unem design, funcionalidade e acolhimento em cada
+                cômodo.
+              </p>
+            </div>
+          </div>
 
-            <!-- Botões -->
-            <button id="prev"
-                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/40 hover:bg-white p-2 rounded-full z-10 shadow-lg hover:shadow-yellow-500/50 transition-all duration-300">
-                <i class="bi bi-chevron-left text-black"></i>
-            </button>
-            <button id="next"
-                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/40 hover:bg-white p-2 rounded-full z-10">
-                <i class="bi bi-chevron-right text-black"></i>
-            </button>
+          <!-- Slide -->
+          <div
+            class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800"
+          >
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src="./assets/mesa.jpg"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-2xl font-semibold text-white">
+                Feito para famílias
+              </h3>
+              <p class="text-gray-300">
+                Pensado para o dia a dia da sua casa — com praticidade e estilo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide -->
+          <div
+            class="w-full flex-shrink-0 flex flex-col items-center text-center bg-neutral-800"
+          >
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src="./assets/IMG_6061.jpg"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-2xl font-semibold text-white">
+                Estilo e sofisticação
+              </h3>
+              <p class="text-gray-300">
+                Peças modernas para transformar ambientes com a sua
+                personalidade.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Texto Descritivo -->
-        <div class="relative z-10 mt-20 bg-black/40 backdrop-blur-lg text-white rounded-xl shadow-lg max-w-4xl mx-auto px-8 py-10 text-center text-lg md:text-xl leading-relaxed space-y-5 border border-white/10"
-            data-aos="fade-up" data-aos-delay="200">
-            <p>
-                Somos uma loja de móveis localizada em Doutor Camargo, dedicada a oferecer uma seleção exclusiva de
-                peças que unem <span class="text-yellow-400 font-semibold">qualidade, conforto e estilo</span>.
-            </p>
-            <p>
-                Nossa missão é transformar sua casa em um lar acolhedor e inspirador, com móveis que atendem aos mais
-                diversos gostos e necessidades.
-            </p>
-            <p>
-                Com um <span class="text-yellow-400 font-semibold">atendimento personalizado</span> e atencioso, estamos
-                prontos para ajudar você a encontrar o móvel perfeito para cada ambiente.
-            </p>
-        </div>
+        <!-- Botões -->
+        <button
+          id="prev"
+          class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full shadow-md transition"
+        >
+          <i class="bi bi-chevron-left text-black text-xl"></i>
+        </button>
+        <button
+          id="next"
+          class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full shadow-md transition"
+        >
+          <i class="bi bi-chevron-right text-black text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Descrição Final -->
+      <div
+        class="mt-20 max-w-4xl mx-auto px-6 text-center space-y-5 text-lg leading-relaxed text-gray-300"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <p>
+          Localizada em Doutor Camargo, a
+          <span class="text-yellow-400 font-medium">Izabela Móveis</span> é
+          referência em soluções personalizadas para quem busca
+          <span class="text-yellow-400 font-medium"
+            >qualidade, conforto e estilo</span
+          >.
+        </p>
+        <p>
+          Nossa missão é transformar sua casa em um lar inspirador — com peças
+          que acolhem, organizam e refletem o seu gosto.
+        </p>
+        <p>
+          Atendimento
+          <span class="text-yellow-400 font-medium">humano e próximo</span>,
+          sempre prontos para ajudar você a encontrar o móvel ideal.
+        </p>
+      </div>
     </section>
 
+    <section id="services" class="py-28 bg-neutral-950 px-6 lg:px-16">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-semibold text-yellow-400 tracking-tight">
+          Nossos Serviços
+        </h2>
+        <p class="text-gray-400 mt-4 text-lg max-w-3xl mx-auto">
+          Mais do que móveis — oferecemos soluções que transformam seu espaço em
+          um lar completo.
+        </p>
+      </div>
 
-    <section id="services">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+      >
+        <!-- Card -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <i class="bi bi-brush text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Consultoria de Decoração</h3>
+          <p class="text-sm text-gray-300">
+            Ajuda profissional para montar ambientes incríveis com estilo e
+            funcionalidade.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <i class="bi bi-truck text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Entrega Rápida e Segura</h3>
+          <p class="text-sm text-gray-300">
+            Levamos seus móveis com agilidade, segurança e muito cuidado até a
+            sua casa.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <i class="bi bi-tools text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Montagem Inclusa</h3>
+          <p class="text-sm text-gray-300">
+            Você compra e nós montamos! Sem dor de cabeça e com total
+            praticidade.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
+          <i class="bi bi-rulers text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Móveis Sob Medida</h3>
+          <p class="text-sm text-gray-300">
+            Projetos personalizados que se encaixam perfeitamente no seu espaço.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <i class="bi bi-whatsapp text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Atendimento via WhatsApp</h3>
+          <p class="text-sm text-gray-300">
+            Fale com a gente direto pelo WhatsApp e tire todas as suas dúvidas
+            rapidamente.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center space-y-4 text-white"
+          data-aos="fade-up"
+          data-aos-delay="350"
+        >
+          <i class="bi bi-gift text-3xl text-yellow-400"></i>
+          <h3 class="text-lg font-semibold">Ofertas e Promoções</h3>
+          <p class="text-sm text-gray-300">
+            Aproveite descontos especiais e condições imperdíveis em datas
+            promocionais.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- <section id="contact">
-        <div class="max-w-4xl mx-auto px-6 py-12">
-            <h2 class="text-white text-3xl font-semibold mb-6">Contact Us</h2>
-            <form action="#" method="POST" class="bg-neutral-800 p-6 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label for="name" class="block text-white mb-2">Name</label>
-                    <input type="text" id="name" name="name" required
-                        class="w-full p-3 bg-neutral-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-white mb-2">Email</label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full p-3 bg-neutral-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-white mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" required
-                        class="w-full p-3 bg-neutral-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 rounded transition">
-                    Send Message
-                </button>
+    <section id="contact" class="relative py-24 bg-neutral-950 px-6 lg:px-20">
+      <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-yellow-400 text-4xl font-semibold mb-4 tracking-tight">
+          Vamos conversar?
+        </h2>
+        <p class="text-gray-400 text-lg mb-12">
+          Estamos disponíveis pelo WhatsApp e também na nossa loja física em
+          Doutor Camargo.
+        </p>
 
+        <div
+          class="flex flex-col md:flex-row justify-center gap-10 items-center"
+        >
+          <!-- Botão WhatsApp -->
+          <a
+            href="https://wa.me/5544988239500"
+            target="_blank"
+            class="flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full shadow-lg transition-transform hover:-translate-y-1"
+          >
+            <i class="bi bi-whatsapp text-2xl"></i>
+            <span class="text-lg font-medium">Fale pelo WhatsApp</span>
+          </a>
+
+          <!-- Mapa e Infos -->
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-lg max-w-md w-full"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.237405674925!2d-52.21983382392593!3d-23.557322478800494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed3aeca09040a9%3A0x88d50d02f30745e6!2sIzabela%20Moveis!5e0!3m2!1spt-BR!2sbr!4v1720100000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="240"
+              class="w-full"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="p-4 text-sm text-white space-y-2 text-left">
+              <p>
+                <strong class="text-yellow-400">📍 Endereço:</strong> Av. Ivaí,
+                731 - Centro, Dr. Camargo - PR
+              </p>
+              <p><strong class="text-yellow-400">🕒 Horários:</strong></p>
+              <ul class="ml-4 list-disc text-gray-300">
+                <li>Seg. à Sex.: 08:00 – 18:00</li>
+                <li>Sábado: 08:00 – 12:00</li>
+                <li class="text-red-400">Domingo: Fechado</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </section>-->
-</body>
+      </div>
+    </section>
 
+    <footer class="bg-neutral-950 border-t border-white/10 py-16 px-6 lg:px-20">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-gray-300 text-sm"
+      >
+        <div>
+          <h4 class="text-white text-base font-semibold mb-4">Loja</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#about" class="hover:text-yellow-400 transition"
+                >Sobre nós</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-yellow-400 transition"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-yellow-400 transition"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-base font-semibold mb-4">Atendimento</h4>
+          <ul class="space-y-2">
+            <li>
+              WhatsApp:
+              <a
+                href="https://wa.me/5544988239500"
+                class="hover:text-green-400 transition"
+                >Clique aqui</a
+              >
+            </li>
+            <li>Seg-Sex: 08h – 18h</li>
+            <li>Sábado: 08h – 12h</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-base font-semibold mb-4">Endereço</h4>
+          <p>
+            Av. Ivaí, 731 - Centro<br />
+            Dr. Camargo - PR, 87155-000
+          </p>
+          <a
+            href="https://www.google.com/maps/place/Izabela+Moveis"
+            target="_blank"
+            class="mt-2 inline-block text-yellow-400 hover:underline"
+          >
+            Ver no mapa
+          </a>
+        </div>
+
+        <div>
+          <h4 class="text-white text-base font-semibold mb-4">Siga-nos</h4>
+          <div class="flex gap-4 text-xl">
+            <a
+              href="https://www.instagram.com/izabelamoveis1/"
+              target="_blank"
+              class="hover:text-pink-400 transition"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/izabela.movies"
+              target="_blank"
+              class="hover:text-blue-400 transition"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              href="https://wa.me/5544988239500"
+              target="_blank"
+              class="hover:text-green-400 transition"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-gray-500 text-xs mt-12">
+        © 2025 Izabela Móveis. Todos os direitos reservados.
+      </div>
+    </footer>
+  </body>
 </html>
