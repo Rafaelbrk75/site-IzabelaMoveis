@@ -64,5 +64,5 @@ Desenvolvido por Rafael Rodrigues Oliveira Santos como parte do portfólio pesso
 
 ---
 
-📬 Se quiser sugestões de melhorias, integração com e-commerce ou adicionar um formulário funcional, entre em contato!
+📬 Se tiver sugestões de melhorias, integração com e-commerce ou adicionar um formulário funcional, entre em contato!
 
