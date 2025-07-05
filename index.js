@@ -63,3 +63,9 @@ setInterval(() => {
     updateSlide();
 }, 5000);
 
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000,
+        once: false, // a animação ocorre apenas uma vez ao entrar na tela
+    });
+});
