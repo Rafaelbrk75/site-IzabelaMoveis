@@ -60,7 +60,7 @@ Este projeto tem como objetivo apresentar os produtos e valores da loja Izabela 
 
 ## 🙌 Créditos
 
-Desenvolvido por [Seu Nome] como parte do portfólio pessoal de projetos em **desenvolvimento web**.
+Desenvolvido por Rafael Rodrigues Oliveira Santos como parte do portfólio pessoal de projetos em **desenvolvimento web**.
 
 ---
 
